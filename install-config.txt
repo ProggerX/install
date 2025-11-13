@@ -1,0 +1,5 @@
+vlc
+gimp
+git
+vscode
+htop
