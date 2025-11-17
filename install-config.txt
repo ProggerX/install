@@ -1,5 +1,5 @@
-vlc
-gimp
+btop
 git
-vscode
-htop
+vim
+mpv
+vitetris

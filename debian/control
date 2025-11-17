@@ -1,0 +1,8 @@
+Package: mass-installer
+Version: 1.0.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: bash
+Maintainer: Progger X <x@proggers.ru>
+Description: Mass installation utility.
