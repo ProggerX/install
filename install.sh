@@ -108,6 +108,7 @@ if [ "$PACKAGE_MANAGER" == "unknown" ]; then
 elif [ "$PACKAGE_MANAGER" == "apt" ]; then
 	export UPDATE_COMMAND="apt-get update -y"
 	export INSTALL_COMMAND="apt-get install -y"
+    export DEBIAN_FRONTEND=noninteractive
 elif [ "$PACKAGE_MANAGER" == "dnf" ]; then
 	export UPDATE_COMMAND="true"
 	export INSTALL_COMMAND="dnf install -y"
