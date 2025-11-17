@@ -12,18 +12,20 @@ jobs:
       - run: |
           sudo apt update
           sudo apt install debhelper
-          mkdir -p mass-installer
-          cp install.sh mass-installer/mass-install
-          echo "mass-installer/mass-install /usr/local/bin" > debian/install
+          mkdir -p debian/mass-installer/usr/bin
+          cp install.sh mass-install
+          echo "mass-install /usr/bin" > debian/install
 
       - name: Build Debian package
         uses: jtdor/build-deb-action@v1.2.0
         with:
-          package_dir: './'
+          package_dir: './mass-installer-1.0.0'
           artifacts_dir: './output'
+
+      - run: ls -R
 
       - name: Upload .deb package as artifact
         uses: actions/upload-artifact@v4
         with:
           name: debian-package
-          path: ./output/*.deb
+          path: ./debian/artifacts/*.deb
