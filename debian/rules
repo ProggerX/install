@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+export DH_COMPAT = 13
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	dh_auto_install
+
+clean:
+	dh clean
