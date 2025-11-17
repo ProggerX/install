@@ -10,8 +10,11 @@ jobs:
       - uses: actions/checkout@v4
 
       - run: |
-          cp install.sh mass-install
-          echo "mass-install /usr/local/bin" > debian/install
+          sudo apt update
+          sudo apt install debhelper
+          mkdir -p mass-installer
+          cp install.sh mass-installer/mass-install
+          echo "mass-installer/mass-install /usr/local/bin" > debian/install
 
       - name: Build Debian package
         uses: jtdor/build-deb-action@v1.2.0

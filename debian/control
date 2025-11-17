@@ -1,5 +1,6 @@
 Source: mass-installer
 Section: utils
+Build-Depends: debhelper (>= 13), debhelper-compat (= 13)
 Maintainer: Progger X <x@proggers.ru>
 
 Package: mass-installer
