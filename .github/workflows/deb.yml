@@ -9,7 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: echo "install.sh /usr/local/bin" > debian/install
+      - run: |
+          cp install.sh mass-install
+          echo "mass-install /usr/local/bin" > debian/install
 
       - name: Build Debian package
         uses: jtdor/build-deb-action@v1.2.0
